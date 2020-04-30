@@ -10,13 +10,7 @@ function App() {
   const [loading, setLoading ] = useState(true);
   const [fetchedData, setFetchedData] = useState([])
 
-  // const fetchedData = [];
-  // const chart = createChart(document.body, { width: 400, height: 300 });
-
-
-
   useEffect(() =>{
-
     const chart = createChart(chartRef.current, {
       width: chartRef.width,
     height: chartRef.height,
@@ -63,12 +57,11 @@ function App() {
       }
       setLoading(false);
       setFetchedData(prevData => [...prevData, {time: parseInt(new Date(value.time).getTime()), value: parseFloat(value.price)}])
-      // fetchedData.push({time: parseInt(new Date(value.time).getTime()), value: parseFloat(value.price)});
       
-      console.log(fetchedData);
     }
+
     lineSeries.setData(fetchedData)
-    
+
     return () => {
       chart.remove();
       ws.close()
