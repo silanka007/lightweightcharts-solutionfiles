@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { createChart } from 'lightweight-charts';
 
 import './App.css';
@@ -7,8 +7,10 @@ import './App.css';
 
 function App() {
   const chartRef = useRef(null);
+  const [loading, setLoading ] = useState(true);
+  const [fetchedData, setFetchedData] = useState([])
 
-  const fetchedData = [];
+  // const fetchedData = [];
   // const chart = createChart(document.body, { width: 400, height: 300 });
 
 
@@ -59,11 +61,14 @@ function App() {
       if(value.type !== 'ticker'){
         return;
       }
-
-      fetchedData.push({time: parseInt(new Date(value.time).getTime()), value: parseFloat(value.price)});
-      lineSeries.setData(fetchedData)
+      setLoading(false);
+      setFetchedData(prevData => [...prevData, {time: parseInt(new Date(value.time).getTime()), value: parseFloat(value.price)}])
+      // fetchedData.push({time: parseInt(new Date(value.time).getTime()), value: parseFloat(value.price)});
+      
+      console.log(fetchedData);
     }
-
+    lineSeries.setData(fetchedData)
+    
     return () => {
       chart.remove();
       ws.close()
@@ -76,6 +81,9 @@ function App() {
       <header className="App-header">
         BTC-USD Crypto Chart
       </header>
+      {
+        loading ? 'loading...' : null
+      }
       <div className='chart' ref={chartRef}></div>
     </div>
   );
