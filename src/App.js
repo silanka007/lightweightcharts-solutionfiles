@@ -2,6 +2,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import { createChart } from 'lightweight-charts';
 
 import './App.css';
+import Chart from './components/chart';
 
 
 
@@ -10,7 +11,7 @@ function App() {
   const [loading, setLoading ] = useState(true);
   const [fetchedData, setFetchedData] = useState([])
 
-  useEffect(() =>{
+  useEffect(() => {
     const chart = createChart(chartRef.current, {
       width: chartRef.width,
     height: chartRef.height,
@@ -75,9 +76,10 @@ function App() {
         BTC-USD Crypto Chart
       </header>
       {
-        loading ? 'loading...' : null
+        loading ? 'loading...' :  null
       }
-      <div className='chart' ref={chartRef}></div>
+      <Chart ref={chartRef} />
+
     </div>
   );
 

@@ -18,11 +18,3 @@
   font-size: calc(10px + 2vmin);
   color: white;
 }
-
-.chart{
-  width: 90%;
-  background-color: yellow;
-  height: 400px;
-  display: flex;
-  margin: 0 auto;
-}
