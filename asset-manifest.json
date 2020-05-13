@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/lightweightcharts-solutionfiles/static/css/main.d7d1cc49.chunk.css",
-    "main.js": "/lightweightcharts-solutionfiles/static/js/main.ca0aa65d.chunk.js",
-    "main.js.map": "/lightweightcharts-solutionfiles/static/js/main.ca0aa65d.chunk.js.map",
-    "runtime-main.js": "/lightweightcharts-solutionfiles/static/js/runtime-main.740cdfd8.js",
-    "runtime-main.js.map": "/lightweightcharts-solutionfiles/static/js/runtime-main.740cdfd8.js.map",
-    "static/js/2.8de02926.chunk.js": "/lightweightcharts-solutionfiles/static/js/2.8de02926.chunk.js",
-    "static/js/2.8de02926.chunk.js.map": "/lightweightcharts-solutionfiles/static/js/2.8de02926.chunk.js.map",
+    "main.css": "/lightweightcharts-solutionfiles/static/css/main.588ff844.chunk.css",
+    "main.js": "/lightweightcharts-solutionfiles/static/js/main.c8afc91e.chunk.js",
+    "main.js.map": "/lightweightcharts-solutionfiles/static/js/main.c8afc91e.chunk.js.map",
+    "runtime-main.js": "/lightweightcharts-solutionfiles/static/js/runtime-main.7bf1f35e.js",
+    "runtime-main.js.map": "/lightweightcharts-solutionfiles/static/js/runtime-main.7bf1f35e.js.map",
+    "static/js/2.3f119228.chunk.js": "/lightweightcharts-solutionfiles/static/js/2.3f119228.chunk.js",
+    "static/js/2.3f119228.chunk.js.map": "/lightweightcharts-solutionfiles/static/js/2.3f119228.chunk.js.map",
     "index.html": "/lightweightcharts-solutionfiles/index.html",
-    "precache-manifest.a9b8cbc96eeb949b245e12c181d75bc6.js": "/lightweightcharts-solutionfiles/precache-manifest.a9b8cbc96eeb949b245e12c181d75bc6.js",
+    "precache-manifest.08f171f30f6543587092f086369ef160.js": "/lightweightcharts-solutionfiles/precache-manifest.08f171f30f6543587092f086369ef160.js",
     "service-worker.js": "/lightweightcharts-solutionfiles/service-worker.js",
-    "static/css/main.d7d1cc49.chunk.css.map": "/lightweightcharts-solutionfiles/static/css/main.d7d1cc49.chunk.css.map",
-    "static/js/2.8de02926.chunk.js.LICENSE.txt": "/lightweightcharts-solutionfiles/static/js/2.8de02926.chunk.js.LICENSE.txt"
+    "static/css/main.588ff844.chunk.css.map": "/lightweightcharts-solutionfiles/static/css/main.588ff844.chunk.css.map",
+    "static/js/2.3f119228.chunk.js.LICENSE.txt": "/lightweightcharts-solutionfiles/static/js/2.3f119228.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.740cdfd8.js",
-    "static/js/2.8de02926.chunk.js",
-    "static/css/main.d7d1cc49.chunk.css",
-    "static/js/main.ca0aa65d.chunk.js"
+    "static/js/runtime-main.7bf1f35e.js",
+    "static/js/2.3f119228.chunk.js",
+    "static/css/main.588ff844.chunk.css",
+    "static/js/main.c8afc91e.chunk.js"
   ]
 }
