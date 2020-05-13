@@ -2,7 +2,8 @@ import React, { useState, useEffect, useRef } from 'react';
 import { createChart } from 'lightweight-charts';
 
 import './App.css';
-import Chart from './components/chart';
+import TvChart from './components/tvchart';
+import Filter from './components/filter';
 
 
 
@@ -30,6 +31,10 @@ function App() {
       localization: {
         dateFormat: 'yyyy/MM/dd',
       },
+      timeScale: {
+        timeVisible: true,
+        secondsVisible: false
+      }
   });
 
   const lineSeries = chart.addLineSeries();
@@ -45,7 +50,7 @@ function App() {
                     "BTC-USD",
                 ]
             }
-        ]
+        ],
     }
     const ws = new WebSocket('wss://ws-feed.pro.coinbase.com');
     ws.onopen = () => {
@@ -56,9 +61,9 @@ function App() {
       if(value.type !== 'ticker'){
         return;
       }
-      setLoading(false);
+      setLoading(false); 
       setFetchedData(prevData => [...prevData, {time: parseInt(new Date(value.time).getTime()), value: parseFloat(value.price)}])
-      
+      console.log(fetchedData)
     }
 
     lineSeries.setData(fetchedData)
@@ -76,9 +81,9 @@ function App() {
         BTC-USD Crypto Chart
       </header>
       {
-        loading ? 'loading...' :  null
+        loading ? 'loading...' :  <Filter />
       }
-      <Chart ref={chartRef} />
+      <TvChart ref={chartRef} />
 
     </div>
   );

@@ -1,0 +1,20 @@
+.filter{
+    padding: 0 1rem;
+
+    .filter-list{
+        list-style-type: none;
+        display: flex;
+
+        .filter-list-item{
+            padding: 0.5rem 1rem;
+            margin: 0.5rem;
+            background: rgb(236, 236, 236);
+            border-radius: 1rem;
+            outline: none;
+
+            &:active{
+                background: rgb(172, 171, 171);
+            }
+        }
+    }
+}
